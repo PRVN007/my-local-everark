@@ -11,6 +11,45 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+|--------------------------------------------------------------------------
+| Urls for Admin
+|--------------------------------------------------------------------------
+
+*/
+
+
+//Route::get('admin/login', [ 'uses' => 'AuthController@login']);
+//Route:get('admin/loginprocess', [ 'uses' => 'AuthController@loginProcess']);
+//Route::get('login', [ 'uses' => 'CemeteryController@login']);
+//Route::get('loginprocess', [ 'uses' => 'CemeteryController@loginProcess']);
+//Route::get('cust/login', [ 'uses' => 'CustomerController@login']);
+//Route::get('cust/loginprocess', [ 'uses' => 'CustomerController@loginProcess']);
+
+
+
+Route::group([ 'middleware' => 'AdminAccess'], function () {
+    Route::get('/admin/login', function () {
+        if (Auth::guest()) {
+            if(!empty(url()->previous()))
+            {
+                session()->put('rediretUrl', url()->previous());
+            }
+            return view('layout.auth_admin');
+        } else {
+            return redirect('admin/dashboard');
+        }
+    });
 });
+
+
+
+Route::group([ 'middleware' => 'auth','middleware' => 'AdminAccess', 'prefix' => 'admin'], function () {
+    
+        Route::get('/', function () {
+            return redirect('admin/dashboard');
+        });
+    
+
+});
+

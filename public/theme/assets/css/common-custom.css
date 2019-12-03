@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 3, 2019, 1:09:02 PM
+    Author     : WHI335
+*/
+
+.login .content {
+    background-color: #fff;
+    -webkit-border: 1px solid #c8c8c8;
+    -moz-border: 1px solid #c8c8c8;
+    -o-border: 1px solid #c8c8c8;
+    border: 1px solid #c8c8c8;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    width: 400px;
+    margin: 40px auto 10px;
+    padding: 10px 30px 20px;
+    overflow: hidden;
+    position: relative;
+}

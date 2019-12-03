@@ -1,0 +1,836 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 4, 2019, 3:42:51 PM
+    Author     : Inderjeet
+*/
+
+.everark-container .page-content{overflow: hidden;}
+.form-multiple-design .page-content-inner a {
+    text-decoration: underline;
+    margin-right: 5px;
+}
+.form-multiple-design .page-content-inner h3{font-weight: 400;}
+.form-multiple-design .green-btn{background: #24a90c;color: white;}
+.form-multiple-design table tbody tr td.border-0{border: none;}
+.form-multiple-design .every-info table tr td:nth-child(1){padding-left: 0;}
+.form-multiple-design .every-info table tr td:nth-child(2){padding-right: 0;}
+.every-info table tr td span{display: block;padding: 5px 0}
+.form-multiple-design .pt-15{padding-top: 15px;}
+.form-multiple-design .width-500{max-width: 500px;width: 100%;}
+
+.cemetery-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none;
+}
+
+.loader-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);text-align: center;
+    color: white;
+}
+.loader-content > i{
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+.billing-info table tr td:nth-child(1) {
+    width: 20%;
+}
+@media only screen and (max-width:767px) {
+    .form-multiple-design .every-info table tr td .btn{
+        margin-top: 5px;
+    }
+    .every-info .edit-view table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .every-info .edit-view table tr td{
+        border: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+
+    }
+    .every-info .edit-view table tr td:nth-child(2){padding-top: 4px;}
+    #iperfrancePlot .perfrance-multi-select{width: 100%!important;}
+    #iperfrancePlot .add-new-import.blue-madison{display: inline-block;width: auto;margin-right: 0;margin-top: 10px;}
+    .pre-view tr{display: flex;flex-direction: column;}
+    .pre-view tr td{border: 0!important;}
+    .pre-view tr td:nth-child(1){    font-weight: bold;padding-bottom: 0;}
+    .pre-view tr td:nth-child(2){    border-bottom: 1px #e6e6e6 solid!important;}
+    .billing-info tr{display: flex;flex-direction: column;}
+    .billing-info tr td{border: 0!important;}
+    .billing-info tr td:nth-child(1){font-weight: bold;}
+    .billing-info tr td:nth-child(2){ border-bottom: 1px #e6e6e6 solid!important;  }
+    .basic-info table tr{display: flex;width: 100%;flex-direction: column;}
+    .basic-info table tr td{width: 100%!important;border: 0;}
+    .basic-info table tr td:nth-child(1){    margin-left: -15px;padding-bottom: 0;}
+    .basic-info .admin-profile-upload-new{display: inline;}
+    .basic-info .Prefrences h3{    margin-left: -10px;font-weight: 500;}
+}
+
+.remove-top-border > td{
+    border-top: none !important;
+}
+
+.ajax-upload-dragdrop span {
+    display: none !important;
+}
+.cemetery-logo > img{
+    height:50px;
+}
+.cemetery-logo-header{
+    height:50px;
+}
+.cemetery-page-logo > a{
+    margin-left: 35px;
+    margin-top: 15px;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle .fa-cog{transition: transform 0.7s;    color: black;font-size: 30px;}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle:hover, .page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle{background: transparent;}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle:hover .fa-cog{
+    transform: rotate(90deg);
+    color:grey;
+
+}
+.rotate-animate > .dropdown-user > a.space-manage{padding: 0!important;
+                                                  margin-top: 30px!important;}
+
+@media (min-width:768px) {
+    .desktop-hide-logo{display: none;}
+}
+
+@media (max-width:767px) {
+
+    .cemetery-page-logo > a{
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+    .rotate-animate > .dropdown-user > a.space-manage {
+        padding: 0!important;
+        margin-top: 17px!important;
+    }
+    .page-header.navbar .page-logo {
+        width: auto;
+        height: auto;
+        position: static;
+    }
+    .cemetery-logo-header {
+        height: 35px;
+        max-width: 150px;
+        position: absolute;
+        top: 7px;
+        /*        transform: translateY(-50%);*/
+    }
+    .mobile-hide-logo {
+        display: none;
+    }
+
+}
+
+.remove-plot-image{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    color: red;
+    font-size: 1.5rem;
+    background: white;
+    border-radius: 40px !important;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    box-shadow: 0px 1px 2px 0px grey;
+}
+.plots-images{
+    width: 150px;
+    /*height: 150px;*/
+    position:relative;
+    margin-left:0px;
+    margin-bottom: 0px;
+    clear: both;
+    margin-right:10px;
+}
+.image-sizefix.image-size{margin-left: 0!important;position:static!important;}
+
+.pricing-content-2 {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+
+.google-sign-up{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: .19px;
+    color: rgba(0,0,0,.54);
+    padding: 17px 0;
+    line-height: normal;
+    background-image: url(../../../images/google.png);
+    background-repeat: no-repeat;
+    background-position: left 11px center;
+    cursor: pointer;
+    margin: auto;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
+    background-color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.remember-me{clear:both;margin:10px;float:left}
+.navbar{
+    border-radius:0px !important;
+}
+.admin-profile-upload-new{padding-left:7px;}
+.domain-status{    display: inline-block!important;padding: 7px 15px!important;border-radius: 4px!important;margin-left: 15px!important;}
+.pricing-content-2 .pricing-table-container .price-column-container > .price-table-pricing > h3 > .price-sign {
+    font-size: 24px;
+    position: absolute;
+    margin-left: 0!important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pricing-content-2 .pricing-table-container .price-column-container > .price-table-pricing > h3{display: inline;}
+.pricing-content-2 .pricing-table-container .price-column-container > .price-table-pricing > h3 .currency-left{  left: -20px;right:auto;}
+.pricing-content-2 .pricing-table-container .price-column-container > .price-table-pricing > h3 .currency-right{  left: auto;right:0px;}
+/*.cemetery-loader .loader-content img{   animation: flip 2s alternate infinite;width: 100px;position:relative;top:-10px;}*/
+.cemetery-loader .loader-content img{   -webkit-animation: rotation 2s infinite linear;width: 100px;position:relative;top:-10px;}
+.products-details .btn-icon-file{    border-radius: 50%;
+                                     border: 1px solid #fff;
+                                     width: 30px;
+                                     height: 30px;
+                                     background: transparent;
+                                     padding: 0;
+                                     margin: 0 3px;display:inline-block;    text-align: center;}
+.products-details .btn-icon-file i.fa{
+    color: #e8e8e8;
+    line-height: 30px;
+}
+.total-amt table{width:100%;margin-left: auto;}
+.total-amt table tr td{
+    border:0;
+    width:83%;
+}
+.total-amt table tr:nth-child(1) td{
+    font-size: 18px;
+}
+.total-amt table tr:nth-child(2) td{
+    font-size: 24px;
+    font-weight: bold;
+}
+.purchase-criteria .select-radio label{
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 22px!important;
+    line-height: 1.3!important;
+}
+.purchase-criteria .select-radio{
+    margin-top: 25px;
+}
+.purchase-criteria .text-field{overflow: hidden;width:100%;display:block;}
+.criteria-label {
+
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.criteria-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.criteria-label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.criteria-label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.criteria-label input:checked ~ .checkmark {
+    background-color: #4bc869;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.criteria-label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.criteria-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.criteria-label .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+}
+
+.purchase-criteria .text-field .form-group input{
+    height: 44px;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid #c2cad8;
+    margin-left:0;
+}
+.purchase-criteria .text-field .form-group.mb-10{
+    margin-bottom: 10px;
+}
+.vetern-radio p{
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 16px!important;
+    line-height: 1.3!important;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.main-purchase-criteria .common-heading{margin-bottom: 25px;}
+.vetern-radio input{height:18px!important;box-shadow:none!important;width:18px;margin-top:2px;}
+.vetern-radio label{padding-left: 0!important;margin-left: 22px;margin-right: 15px;}
+.Order-form-style label{clear:both;}
+.all-order h3{margin-bottom: 15px;text-align:left;}
+.Question-answer {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-right:35px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight:400;
+}
+
+/* Hide the browser's default checkbox */
+.Question-answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.Question-answer .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.Question-answer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Question-answer input:checked ~ .checkmark {
+    background-color: #4bc869;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.Question-answer .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.Question-answer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.Question-answer .checkmark:after {
+    left: 7px;
+    top: 7px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+
+}
+.inside-order{margin-top:20px;}
+.inside-order .order1 > p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.products-details h3{text-align:Center;}
+.products-details img{margin:0 auto;display:block;}
+.products-details span h4, .products-details span h5, .products-details span h6{width: auto;padding-top:5px;padding-left:5px;padding-top: 5px;float: left;}
+.deed-info-btn{display: block;}
+.deed-info-btn a{    display: inline-block;
+                     color: #4bc869;
+                     text-transform: uppercase;
+                     height: auto;
+                     padding: 12px 24px;
+                     line-height: 1;
+                     background: none;
+                     border: 2px solid #4bc869;
+                     border-radius: 6px;
+                     font-weight: 300;margin-left:10px;}
+.need-form-btn a,.total-amt a{
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    padding: 6px 12px;
+    line-height: 1.44;
+    background: #2da04b;
+    font-weight: 300;
+    border: 1px solid #2da04b;
+}
+.total-amt a:hover,.total-amt a:focus{color:white;}
+.need-form-btn button{
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    padding: 6px 12px;
+    line-height: 1.44;
+    background: #2da04b;
+    font-weight: 300;
+
+}
+.need-form-btn .btn.focus, .need-form-btn .btn:focus, .need-form-btn .btn:hover{outline: 0;color:white;}
+.need-form-btn button:hover{
+    color:white;
+}
+.need-form-btn a:nth-child(1),.deed-info-btn a:nth-child(1){
+    color: white;
+    border: 1px solid #A6A6A6;
+    margin-right: 15px;
+    BACKGROUND: #A6A6A6;
+    padding: 6px 12px;
+    line-height: 1.44;
+}
+/*.need-form-btn a:nth-child(1):hover,.deed-info-btn a:nth-child(1):hover{
+    background: #e7505a;
+    color:white;
+}
+.need-form-btn a:nth-child(2):hover,.deed-info-btn a:nth-child(2):hover,.total-amt a:hover{
+    background: #4bc869;
+    color:white;
+}*/
+/*.need-form-btn button:nth-child(2):hover{
+    background: #4bc869;
+    color:white;
+}*/
+.need-form-btn{
+    text-align: right;
+    margin-top: 25px;
+}
+.vetern-radio-gender span{    padding-left: 27px;}
+.vetern-radio-gender label:nth-child(2) span{    padding-left: 25px;}
+.text-field .form-group:nth-child(2n+1) {
+    clear: both;
+}
+.vetern-radio-gender label{
+    margin: 0;
+    padding: 0;
+}
+.vetern-radio-gender label input{box-shadow:none!important;}
+.vetern-radio-purchaser input{width:auto!important;height:auto!important;box-shadow:none!important;}
+.Deceased{padding-left:25px;border-left:1px lightgrey solid;}
+.purchaser>hr,.Deceased>hr{    border-top: 1px solid  #c5ffcf;}
+
+
+/*summery*/
+.order-summery{
+    display: flex;
+    flex-direction: row;
+}
+
+.ship-bill-details{
+    width: 50%;
+}
+.ship-detail,.bill-detail{
+    border: 1.5px #4bc869 solid;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 1px 2px 5px lightgrey;
+    margin-bottom: 0px;
+    min-height:187px;
+}
+.ship-detail{margin-bottom:25px;}
+.ship-detail h3,.bill-detail h3{
+    margin: 0;
+    border-bottom: 1px lightgrey solid;
+    padding-bottom: 8px;
+}
+.ship-detail p,.bill-detail p{
+    padding-top: 10px;
+}
+.right-order-summary tr td, .right-order-summary tr th {
+    border: 0!important;
+    width:65%;
+}
+.right-order-summary {
+    background: #4bc869;
+    padding: 15px;
+    margin: 0 0 0 40px;
+    border-radius: 6px;
+    color: white;
+}
+.btn-paynow{
+    width: 100%;
+    background: white;
+    color: green;
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top:20px;
+}
+.sec-table{margin-bottom: 0;}
+.right-order-summary tr th.summary-heading{
+    font-size: 24px;
+    border-bottom: 1px white solid!important;
+}
+.select-boxex td{padding: 0 8px!important;}
+/*summery*/
+.select-boxex input{
+    float:left;margin-right:5px;
+}
+.order-payment{
+    margin-top: 9%;
+    padding: 0 10px;
+    background: whitesmoke;
+    height: 100px;
+    padding-top: 43px;
+    overflow: hidden;
+}
+
+
+/*@Keyframes flip{
+    from{transform: scale(-1, 1);}
+}*/
+
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.err-color{
+    color: red;
+}
+.gender-required{padding-left: 0px !important;}
+.everark-add-admin-action{display: flex;}
+.right-algin-text{justify-content: flex-end;}
+.pr-0{padding-right: 0;}
+
+
+/*button.multiselect.dropdown-toggle.btn.btn-default{
+    display: inline-flex;
+    align-items: center;
+}
+.multiselect-selected-text{padding-right: 5px !important;}
+ul.multiselect-container.dropdown-menu{
+        height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+}*/
+.inputfile-6 + label{color:#383838;}
+.bsave{
+    background: #2da04b;
+    color:white !important;
+    border-color:#2da04b;
+    text-transform: uppercase;
+}
+.bsave:hover{
+    background: #2da04b;
+    color:white !important;
+    border-color:#2da04b;
+    text-transform: uppercase;
+}
+.bsave:focus{
+    text-transform: uppercase;
+    outline:none;
+    background: #2da04b;
+    color:white !important;
+    border-color:#2da04b;
+}
+.bcancel{
+    text-transform: uppercase;
+    background: #e73d4a;
+    color:white !important;
+    border-color:#e73d4a;
+}
+.bcancel:hover{
+    text-transform: uppercase;
+    background: #e73d4a;
+    color:white !important;
+    border-color:#e73d4a;
+}
+.add_Import,.add_Import:hover{
+    color: #FFF;
+    background-color: #4baac8;
+    border-color: #4baac8;
+}
+.bback,.bback:hover{
+    color: white;
+    border: 1px solid #A6A6A6;
+
+    BACKGROUND: #A6A6A6;
+    padding: 6px 12px;
+    line-height: 1.44;
+}
+.report-filed
+{
+    right: 24%;
+}
+#cropped_result{width: 100%;}
+#uploadedImg{    
+    max-width: 100%;
+    width:100%;
+    /*    overflow: hidden;*/
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.checkbox{position: relative;left: -3px;}
+.form-control, output {
+    color: #383838 !important;
+}
+.add-new-import
+{
+    /*    background-color: #ffffff !important; 
+        border-color:#3b3838 !important; 
+        color:#3b3838 !important; */
+    background-color: #ffffff !important;
+    border-color: white !important;
+    color: #969696 !important;
+    border-radius: 4px!important;
+}
+.image-upload-style #upload-text{display:inline;}
+.edit-prefrences table tr td:nth-child(1){width:12%;}
+@media (max-width:991px) {
+    .admin-profile-upload-new{
+        padding-left:15px;
+    }
+}
+@media (max-width:767px) {
+    #region-input{padding:0;}
+    #region-input .col-md-6{margin-bottom: 10px;}
+    .admin-form .row-flex{    flex-direction: column;}
+    .admin-form .row-flex .width-same {width:100%;}
+    .admin-form .row-flex .width-same:last-child{width:100%;}
+    .edit-prefrences table tr td:nth-child(1){width:30%;}
+    .total-amt table tr td {
+        border: 0;
+        width: 60%;
+    }
+    .purchase-criteria .select-radio label{
+        font-size: 14px!important;
+    }
+    .select-radio .col-xs-6{text-align: left!important;}
+    .select-radio .col-xs-6:nth-child(1){padding-left:0;}
+    .purchase-criteria .select-radio{margin-top:10px;}
+    .purchase-criteria .select-radio label{    font-size: 14px!important;}
+    .criteria-label .checkmark{top:-5px;}
+    .order-question .all-order h3,.Question-answer{font-size: 16px;}
+    .Question-answer{margin-right:0;}
+
+    .need-form-btn{text-align:left;}
+    .vetern-radio .radio-inline input {margin:0;}
+    .vetern-radio label{margin-left:24px;}
+    .purchase-criteria{padding:0;}
+    .order-summery{    flex-direction: column;}
+    .right-order-summary{margin: 20px 0 0 0 ;}
+    .ship-bill-details{width:100%;}
+    .purchase-criteria .text-field{padding:0 15px;}
+    .Deceased {
+        padding-left: 0;
+        border-left: 0px lightgrey solid;
+    }
+    .purchase-criteria .text-field .form-group.mb-10{
+        padding: 0;
+    }
+    .mb-67px{
+        margin-bottom: 20px;
+    }
+    .icon-bar-everark{
+        margin-top:30px;
+    }
+    .table-responsive.my-plot-table{overflow-y:auto;}
+}
+.bg-light .checkbox input{margin-left: 2px !important;}
+.tablet-login a {  margin-right: 30px; }
+.active{color: #51d370; background-color: transparent;}
+.popup-image{width: 200px; overflow: hidden; margin-top: 78px;}
+.row-flex .width-same{    width: 14.28%;margin-right: 10px;}
+.row-flex .width-same:last-child{margin-right:0;width:8%;text-align: right;}
+.row-flex{display:flex;padding:0 15px;justify-content: space-around;}
+.cemetery-action-bar{padding-top:20px !important;}
+.row-flex-admin .width-same{width:12.5%;}
+.row-flex .width-same select{
+    padding:6px 5px;font-size:12px;
+}
+.cemetry-profile-img .image-upload-style{
+    margin: auto;
+    width: 200px;
+    clear:both;
+}
+.cemetry-profile-img .recommend-picture-size{text-align: center;}
+.cemetry-profile-img #galleryImages{
+    width: 200px;
+    overflow: hidden;
+    float: none;
+    margin: auto;
+}
+.modal-body#galleryImages#singleImageCanvasContainer0#singleImageCanvasCloseBtn0{
+    display: none !important;
+}
+button#singleImageCanvasCloseBtn0 {
+    display: none !important;
+}
+.view-plot-deed{
+    position: absolute;
+    top: -4px;
+    right: -38px;
+}
+.view-plot-deep-button{font-size: 20px; }
+.seprator{color: lightgrey; font-size: 17px;}
+.perfrance-multi-select #idplotsizes .btn
+{
+    background: transparent;
+    color: black;
+}
+
+.perfrance-multi-select.dropdown-toggle{
+    background: white !important;
+    color: black !important;
+}
+.btn-alert-flex
+{
+    display: flex;
+}
+
+#idImage
+{
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+    display: block;    
+}
+.image_input
+{
+    margin: 15px auto;
+    width: 400px;
+    width: 100%;
+    max-width: 400px;
+}
+#adminBulkActions,#bulkActions
+{
+    max-width: 156px;
+}
+.mr220{margin-left: 220px !important;}
+.button-aligment{display: inline-block !important; float: left;display: flex !important; justify-content: flex-end;}
+.help-block{width: 100%;margin-bottom: 0;}
+.edit-view-plot-deed{
+    position: absolute;
+    top: -4px;
+    left: 98%;
+    width: 100%;
+}
+#bulkActionPlots
+{
+    position: static ! important;
+}
+#rotate-right { background: white; position: absolute; top: 5px; z-index: 99999; left: 5px;display: none; }
+#cropper{position: relative;}
+/*.hide-cropper{display: none;}*/
+.mr24{ margin-top: 25px !important;}
+.pdt0{padding-bottom: 0px;}
+.mrL15{margin-left: 15px;}
+.cropper-container cropper-bg
+{
+    width: 605px;
+    height: 408px;
+}
+img.full-width-image {
+    width: 100%;
+}
+.image-sizefix-profile
+{
+    width: 150px;
+    /*    height: 150px;*/
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.full-width
+{
+    width: 100%;
+}
+.edit-customer
+{
+    float: right;
+}
+.bulk_action_update
+{
+    font-size: 20px;
+    line-height: 34px !important;
+    margin-right: 10px;
+}
+.edit-customer a.btn.btn-default.btn-default-everark {
+    padding-top: 0 !important;
+}
+.desihnee_view table tr th{color:#34495e;} 
+.desihnee_view  table tr td{color:#383838;}
+.img-container {
+    /* Never limit the container height here */
+    max-width: 100% !important;
+}
+
+.img-container img {
+    /* This is important */
+    width: 100% !important;
+}
+#cropper > img {
+    width:100% !important;
+}
+/*.mr-top45{margin-top:45px}*/

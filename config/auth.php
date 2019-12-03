@@ -40,6 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'cemetery' => [
+            'driver' => 'session',
+            'provider' => 'cemetery',
+        ],
+	'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+        'customer' => [
+            'driver' => 'session',
+            'provider' => 'customer',
+        ],
 
         'api' => [
             'driver' => 'token',
@@ -71,10 +83,18 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'cemetery' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Cemeteries::class,
+        ],
+		'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+		'customer' => [
+            'driver' => 'eloquent',
+            'model' => App\Customer::class,
+        ],
     ],
 
     /*
