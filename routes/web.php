@@ -11,45 +11,53 @@
 |
 */
 
-/*
-|--------------------------------------------------------------------------
-| Urls for Admin
-|--------------------------------------------------------------------------
+Route::group(['middleware' => ['web']], function () use($subdomain) {
+	
+	Route::get('/', function () {
+		return view('welcome');
+	});
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Admin Panel Routes
+	|--------------------------------------------------------------------------
+	*/
 
-*/
-
-
-//Route::get('admin/login', [ 'uses' => 'AuthController@login']);
-//Route:get('admin/loginprocess', [ 'uses' => 'AuthController@loginProcess']);
-//Route::get('login', [ 'uses' => 'CemeteryController@login']);
-//Route::get('loginprocess', [ 'uses' => 'CemeteryController@loginProcess']);
-//Route::get('cust/login', [ 'uses' => 'CustomerController@login']);
-//Route::get('cust/loginprocess', [ 'uses' => 'CustomerController@loginProcess']);
-
-
-
-Route::group([ 'middleware' => 'AdminAccess'], function () {
-    Route::get('/admin/login', function () {
-        if (Auth::guest()) {
-            if(!empty(url()->previous()))
-            {
-                session()->put('rediretUrl', url()->previous());
-            }
-            return view('layout.auth_admin');
-        } else {
-            return redirect('admin/dashboard');
-        }
-    });
-});
-
-
-
-Route::group([ 'middleware' => 'auth','middleware' => 'AdminAccess', 'prefix' => 'admin'], function () {
-    
-        Route::get('/', function () {
-            return redirect('admin/dashboard');
-        });
-    
-
+	Route::get('admin/login', 'Admin\Auth\AuthController@login')->name('Admin.login');
+	Route::post('admin/loginProcess', 'Admin\Auth\AuthController@loginProcess')->name('Admin.loginProcess');
+	
+	Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth:admin']], function () {
+		Route::get('logout', 'Auth\AuthController@logout')->name('Admin.logout');
+		
+	});
+	
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Cemetry Panel Routes
+	|--------------------------------------------------------------------------
+	*/
+	Route::get('cemetry/login', 'Cemetry\Auth\AuthController@login')->name('Cemetry.login');
+	Route::post('cemetry/loginProcess', 'Cemetry\Auth\AuthController@loginProcess')->name('Cemetry.loginProcess');
+	
+	Route::group(['namespace' => 'Cemetry', 'prefix' => 'cemetry', 'middleware' => ['auth:cemetry']], function () {
+		Route::get('logout', 'Auth\AuthController@logout')->name('Cemetry.logout');
+		
+	});
+	
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Customer Panel Routes
+	|--------------------------------------------------------------------------
+	*/	
+	Route::get('customer/login', 'Customer\Auth\AuthController@login')->name('Customer.login');
+	Route::post('customer/loginProcess', 'Customer\Auth\AuthController@loginProcess')->name('Customer.loginProcess');
+	
+	Route::group(['namespace' => 'Customer', 'prefix' => 'customer', 'middleware' => ['auth:customer']], function () {
+		Route::get('logout', 'Auth\AuthController@logout')->name('Customer.logout');
+		
+	});
+	
 });
 
