@@ -12,7 +12,7 @@
 */
 
 
-Route::group(['middleware' => ['web']], function () use($subdomain) {
+Route::group(['middleware' => ['web']], function (){
 	Route::get('/', function () {
 		return view('welcome');
 	});
