@@ -18,11 +18,11 @@ Route::group(['middleware' => ['web']], function () use($subdomain) {
 	});
 	
 	
-/*
-|--------------------------------------------------------------------------
-| Admin Panel Routes
-|--------------------------------------------------------------------------
-*/
+	/*
+	|--------------------------------------------------------------------------
+	| Admin Panel Routes
+	|--------------------------------------------------------------------------
+	*/
 
 	Route::get('admin/login', 'Admin\Auth\AuthController@login')->name('Admin.login');
 	Route::post('admin/loginProcess', 'Admin\Auth\AuthController@loginProcess')->name('Admin.loginProcess');
@@ -33,11 +33,11 @@ Route::group(['middleware' => ['web']], function () use($subdomain) {
 	});
 	
 	
-/*
-|--------------------------------------------------------------------------
-| Cemetry Panel Routes
-|--------------------------------------------------------------------------
-*/
+	/*
+	|--------------------------------------------------------------------------
+	| Cemetry Panel Routes
+	|--------------------------------------------------------------------------
+	*/
 	Route::get('cemetry/login', 'Cemetry\Auth\AuthController@login')->name('Cemetry.login');
 	Route::post('cemetry/loginProcess', 'Cemetry\Auth\AuthController@loginProcess')->name('Cemetry.loginProcess');
 	
@@ -47,11 +47,11 @@ Route::group(['middleware' => ['web']], function () use($subdomain) {
 	});
 	
 	
-/*
-|--------------------------------------------------------------------------
-| Customer Panel Routes
-|--------------------------------------------------------------------------
-*/	
+	/*
+	|--------------------------------------------------------------------------
+	| Customer Panel Routes
+	|--------------------------------------------------------------------------
+	*/	
 	Route::get('customer/login', 'Customer\Auth\AuthController@login')->name('Customer.login');
 	Route::post('customer/loginProcess', 'Customer\Auth\AuthController@loginProcess')->name('Customer.loginProcess');
 	
