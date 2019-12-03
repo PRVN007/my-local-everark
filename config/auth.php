@@ -40,6 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+		
+		'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+
+        'cemetry' => [
+            'driver' => 'session',
+            'provider' => 'cemetry',
+        ],
+		
+		'customer' => [
+            'driver' => 'session',
+            'provider' => 'customer',
+        ],
 
         'api' => [
             'driver' => 'token',
@@ -70,6 +85,21 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+		
+		'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+		
+		'cemetry' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Cemetry::class,
+        ],
+		
+		'customer' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Customer::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -96,6 +126,24 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',
+            'expire' => 60,
+        ],
+		
+		'admin' => [
+            'provider' => 'admin',
+            'table' => 'admin_password_resets',
+            'expire' => 60,
+        ],
+		
+		'customer' => [
+            'provider' => 'customer',
+            'table' => 'customer_password_resets',
+            'expire' => 60,
+        ],
+		
+		'cemetry' => [
+            'provider' => 'cemetry',
+            'table' => 'cemetry_password_resets',
             'expire' => 60,
         ],
     ],
